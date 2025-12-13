@@ -1,0 +1,21 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "herancaPrototipo.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusrcamargo/js-orientado-a-objetos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciusrcamargo/js-orientado-a-objetos/issues"
+  },
+  "homepage": "https://github.com/viniciusrcamargo/js-orientado-a-objetos#readme"
+}
