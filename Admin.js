@@ -5,6 +5,10 @@ class Admin extends User {
     constructor(nome, email, nascimento, role = 'admin', ativo = true){
         super(nome, email, nascimento, role, ativo);
     }
+
+    criarCurso(nomeCurso, qtdeVagas){
+        return `Curso ${nomeCurso} criado com ${qtdeVagas} vagas.`;
+    }
 }
 
 const novoAdmin = new Admin('Marcos', 'teste@teste', '05/05/1995');
