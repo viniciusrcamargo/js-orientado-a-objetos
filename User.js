@@ -14,21 +14,55 @@ export default class User{
         this.#ativo = ativo;
     }
 
-    // Método privado para montar o objeto do usuário
-    #montaObjetoUser(){
-        return({
-            nome: this.#nome,
-            email: this.#email,
-            nascimento: this.#nascimento,
-            role: this.#role,
-            ativo: this.#ativo
-        })
+    get nome(){
+        return this.#nome;
     }
+    set nome(novoNome){
+        if(novoNome === ""){
+            throw new Error('Nome não pode ser vazio');
+        }
+        this.#nome = novoNome;
+    }
+    get email(){
+        return this.#email;
+    }
+    set email(novoEmail){
+        this.#email = novoEmail;
+    }
+    get nascimento(){
+        return this.#nascimento;
+    }
+    set nascimento(novoNascimento){
+        this.#nascimento = novoNascimento;
+    }
+    get role(){
+        return this.#role;
+    }
+    set role(novaRole){
+        this.#role = novaRole;
+    }
+    get ativo(){
+        return this.#ativo;
+    }
+    set ativo(novoAtivo){
+        this.#ativo = novoAtivo;
+    }
+
+    // Método privado para montar o objeto do usuário
+    // #montaObjetoUser(){
+    //     return({
+    //         nome: this.#nome,
+    //         email: this.#email,
+    //         nascimento: this.#nascimento,
+    //         role: this.#role,
+    //         ativo: this.#ativo
+    //     })
+    // }
     // Método para exibir informações do usuário
     exibirInfos(){
-        const user = this.#montaObjetoUser();
-        return `Nome: ${user.nome}, Email: ${user.email}, Nascimento: ${user.nascimento}`;
+        return `Nome: ${this.nome}, Email: ${this.email}, Nascimento: ${this.nascimento}`;
     }
+
 }
 
 const novoUsuario = new User('Vinicius','v@v.com','10/10/2000');
