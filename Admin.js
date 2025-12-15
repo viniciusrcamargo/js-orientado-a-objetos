@@ -10,8 +10,15 @@ export default class Admin extends User {
         return `Curso ${nomeCurso} criado com ${qtdeVagas} vagas.`;
     }
 
+    // Sobrescrevendo o método exibirInfos da classe User
+    //polimorfismo
+    exibirInfos(){
+        const infos = super.exibirInfos();
+        return `admin - ${infos}`;
+    }
+
 }
 
 const novoAdmin = new Admin('Marcos', 'teste@teste', '05/05/1995');
-console.log(novoAdmin.nome);
+// console.log(novoAdmin.nome);
 // console.log(novoAdmin.criarCurso('JavaScript', 20));
