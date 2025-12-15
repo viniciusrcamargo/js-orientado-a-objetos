@@ -8,4 +8,4 @@ function User(nome, email){
 }
 
 const novoUsuario = new User('Vinicius','vinicius@gmail.com');
-console.log(novoUsuario.exibirInfos());
+// console.log(novoUsuario.exibirInfos());
