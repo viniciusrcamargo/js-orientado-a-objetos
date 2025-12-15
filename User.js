@@ -62,8 +62,13 @@ export default class User{
     exibirInfos(){
         return `Nome: ${this.nome}, Email: ${this.email}, Nascimento: ${this.nascimento}`;
     }
-
+// Método estático para exibir informações sem instanciar a classe
+static exibirInfos(nome, email, nascimento){
+    return `Nome: ${nome}, Email: ${email}, Nascimento: ${nascimento}`;
 }
+}
+
+
 
 const novoUsuario = new User('Vinicius','v@v.com','10/10/2000');
 // console.log(novoUsuario);
