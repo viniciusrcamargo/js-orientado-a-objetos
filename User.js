@@ -13,9 +13,21 @@ export default class User{
         this.#role = role || 'estudante';
         this.#ativo = ativo;
     }
+
+    // Método privado para montar o objeto do usuário
+    #montaObjetoUser(){
+        return({
+            nome: this.#nome,
+            email: this.#email,
+            nascimento: this.#nascimento,
+            role: this.#role,
+            ativo: this.#ativo
+        })
+    }
     // Método para exibir informações do usuário
     exibirInfos(){
-        return `Nome: ${this.#nome}, Email: ${this.#email}, Nascimento: ${this.#nascimento}`;
+        const user = this.#montaObjetoUser();
+        return `Nome: ${user.nome}, Email: ${user.email}, Nascimento: ${user.nascimento}`;
     }
 }
 
